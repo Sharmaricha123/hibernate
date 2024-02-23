@@ -21,6 +21,8 @@
 	-->
 	<mapping class="com.map.oneTomany.Question"/>
 	<mapping class="com.map.oneTomany.Answer"/>
+	<mapping class="com.map.manyTomany.Employee"/>
+	<mapping class="com.map.manyTomany.Project"/>
 	
 	
 	</session-factory>
