@@ -57,7 +57,7 @@ public class MapDemo {
 		
 		tx.commit();
 		
-//		fetching
+//		fetching data
 		
 		Question newq=(Question)s.get(Question.class, 1212);
 		System.out.println(newq.getQuestionId());
