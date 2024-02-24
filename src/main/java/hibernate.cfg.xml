@@ -13,16 +13,28 @@
 	<!--<property name="hbm2ddl.auto">create</property>-->
 	<property name="hbm2ddl.auto">create</property> 
 	<property name="show_sql">true</property>
+	<property name="format_sql">true</property>
+	
+	  
 	<mapping class="com.tut.Student"/>
+	
 	<mapping class="com.tut.Address"/>
 	<!--  
 	<mapping class="com.map.oneToone.Question"/>
 	<mapping class="com.map.oneToone.Answer"/>
 	-->
+	<!--  
 	<mapping class="com.map.oneTomany.Question"/>
 	<mapping class="com.map.oneTomany.Answer"/>
+	-->
 	<mapping class="com.map.manyTomany.Employee"/>
 	<mapping class="com.map.manyTomany.Project"/>
+	<mapping class="com.fetch.type.Question"/>
+	<mapping class="com.fetch.type.Answer"/>
+	<!--  
+	<mapping class="com.objects.states.Student"/>
+	<mapping class="com.objects.states.Certificate"/>
+	-->
 	
 	
 	</session-factory>
