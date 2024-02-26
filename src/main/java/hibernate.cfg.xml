@@ -6,7 +6,7 @@
 	
 	<session-factory>
 	<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-	<property name="connection.url">jdbc:mysql://localhost:3306/myhibernate</property>
+	<property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property>
 	<property name="connection.username">root</property>
 	<property name="connection.password">root</property>
 	<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
@@ -14,27 +14,37 @@
 	<property name="hbm2ddl.auto">create</property> 
 	<property name="show_sql">true</property>
 	<property name="format_sql">true</property>
-	
 	  
+	<property name="cache.use-second-level-cache">true</property>
+	<property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+	 
 	<mapping class="com.tut.Student"/>
-	
+	  
 	<mapping class="com.tut.Address"/>
+	
 	<!--  
 	<mapping class="com.map.oneToone.Question"/>
 	<mapping class="com.map.oneToone.Answer"/>
 	-->
-	<!--  
+	  <!--  
 	<mapping class="com.map.oneTomany.Question"/>
 	<mapping class="com.map.oneTomany.Answer"/>
 	-->
+	<!--  
 	<mapping class="com.map.manyTomany.Employee"/>
 	<mapping class="com.map.manyTomany.Project"/>
+	-->
+	<!--  
 	<mapping class="com.fetch.type.Question"/>
 	<mapping class="com.fetch.type.Answer"/>
+	-->
+
 	<!--  
 	<mapping class="com.objects.states.Student"/>
 	<mapping class="com.objects.states.Certificate"/>
 	-->
+	
+	<mapping resource="com/mapping/xml/Person.hbm.xml"/>
 	
 	
 	</session-factory>

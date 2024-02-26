@@ -41,15 +41,14 @@ public class App
         fis.read(data);
         ad.setImage(data);
         
-        
-        
-        
+   
         Session session=factory.openSession();
         Transaction tx=session.beginTransaction();
         session.save(st);
         session.save(ad);
         tx.commit();
         session.close();
+        factory.close();
        
         
         
